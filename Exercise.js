@@ -3,11 +3,15 @@
 const newDiv = document.createElement('div');
 newDiv.textContent = 'This is a new div';
 document.body.appendChild(newDiv);
+//Ten kod tworzy nowy element div i dodaje go do drzewa DOM jako dziecko elementu body.
+//Tekst `this is a new div` jest ustawiany jako tekst wewnetrzny nowego elementu div.
 
 //Modyfikowanie istniejącego elementu
 
 const existingDiv = document.querySelector('div');
 existingDiv.textContent = 'This is an existing div';
+//Ten kod pobiera pierwszy element `div` z drzewa DOM przy uzyciu metody `querySelector()`,
+//a nastepnie zmienia jego tekst wewnetrzny na wartosc `This is an existing div`.
 
 //Obsługa zdarzeń
 
@@ -15,6 +19,9 @@ const button = document.querySelector('button');
 button.addEventListener('click', () => {
     console.log('Button clicked')
 });
+// ten kod pobiera pierwszy element `button` z drzewa DOM przy uzyciu metody `querySelector()`,
+// a nastepnie dodaje do niego nasluchiwacz zdarzen, ktory wywola funkcje anonimowa
+// w momencie klikniecia przycisku.
 
 //Zdarzenia myszy
 
@@ -22,6 +29,9 @@ const button = document.querySelector('button');
 button.addEventListener('click', () => {
     console.log('Button clicked with mouse')
 });
+//Ten kod pobiera pierwszy element `button` z drzewa DOM przy uzyciu metody `querySelector()`,
+//a nastepnie dodaje do niego nasluchiwacz zdarzen, ktory wywola funkcje anonimowa
+// w momencie klikniecia przycisku.
 
 //Zdarzenia klawiatury
 
@@ -29,6 +39,9 @@ const input = document.querySelector('input');
 input.addEventListener('keydown', () => {
     console.log('Keydown')
 });
+//Ten kod pobiera pierwszy element `input` z drzewa DOM przy uzyciu metody `querySelector()`,
+//a nastepnie dodaje do niego nasluchiwacz zdarzen, ktory wywola funkcje anonimowa
+// w momencie wcisniecia klawisza.
 
 //Iteracja po elementach
 
@@ -36,6 +49,10 @@ const paragraphs = document.querySelectorAll('p');
 paragraphs.forEach(p => {
     paragraphs.style.color = 'red';
 });
+//Ten kod pobiera wszystkie elementy `p` z drzewa DOM przy uzyciu metody `querySelectorAll()`,
+//a nastepnie iteruje po kazdym z nich przy uzyciu metody `forEach()`.
+//Wewnatrz funkcji anonimowej, ktora jest wywolywana dla kazdego elementu `p`,
+//ustawia kolor tekstu na czerwony.
 
 //Zmiana stylu
 
@@ -43,6 +60,10 @@ const paragraphs = document.querySelectorAll('p');
 paragraphs.forEach(p => {
     p.style.color = 'red';
 });
+//Ten kod pobiera wszystkie elementy `p` z drzewa DOM przy uzyciu metody `querySelectorAll()`,
+//a nastepnie iteruje po kazdym z nich przy uzyciu metody `forEach()`.
+//Wewnatrz funkcji anonimowej, ktora jest wywolywana dla kazdego elementu `p`,
+//ustawia kolor stylu na czerwony.
 
 //Tworzenie i usuwanie elementów
 
@@ -51,6 +72,11 @@ button.addEventListener('clicl', () => {
     const li = document.createElement('li');
     li.textContent = 'Something new to do';
 });
+//Ten kod pobiera pierwszy element `button` z drzewa DOM przy uzyciu metody `querySelector()`,
+//a nastepnie dodaje do niego nasluchiwacz zdarzen, ktory wywola funkcje anonimowa
+// w momencie klikniecia przycisku.
+//Wewnatrz funkcji anonimowej, ktora jest wywolywana dla kazdego elementu `p`,
+//tworzy nowy element `li` i ustawia jego tekst wewnetrzny na `Something new to do`.
 
 //Dodawanie elementów do listy
 
@@ -61,6 +87,13 @@ button.addEventListener('click', () => {
     const ul = document.querySelector('ul');
     ul.appendChild(li);
 });
+//Ten kod pobiera pierwszy element `button` z drzewa DOM przy uzyciu metody `querySelector()`,
+//a nastepnie dodaje do niego nasluchiwacz zdarzen, ktory wywola funkcje anonimowa
+// w momencie klikniecia przycisku.
+//Wewnatrz funkcji anonimowej, ktora jest wywolywana dla kazdego elementu `p`,
+//tworzy nowy element `li` i ustawia jego tekst wewnetrzny na `Something new to do`.
+//Nastepnie pobiera pierwszy element `ul` z drzewa DOM przy uzyciu metody `querySelector()`,
+//a nastepnie dodaje do niego nowy element `li` przy uzyciu metody `appendChild()`.
 
 //Usuwanie elementów z listy
 
@@ -70,6 +103,13 @@ button.addEventListener('click', () => {
     const li = document.querySelector('li');
     ul.removeChild(li);
 });
+//Ten kod pobiera pierwszy element `button` z drzewa DOM przy uzyciu metody `querySelector()`,
+//a nastepnie dodaje do niego nasluchiwacz zdarzen, ktory wywola funkcje anonimowa
+// w momencie klikniecia przycisku.
+//Wewnatrz funkcji anonimowej, ktora jest wywolywana dla kazdego elementu `p`,
+//pobiera pierwszy element `ul` z drzewa DOM przy uzyciu metody `querySelector()`,
+//a nastepnie pobiera pierwszy element `li` z drzewa DOM przy uzyciu metody `querySelector()`.
+//Nastepnie usuwa element `li` z elementu `ul` przy uzyciu metody `removeChild()`.
 
 //Dodawanie i usuwanie klas
 
